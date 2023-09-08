@@ -1,0 +1,13 @@
+{% extends 'mi_aplicacion/base.html' %}
+
+{% block title %}Agregar Categoría{% endblock %}
+
+{% block content %}
+    <h1>Agregar Categoría</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+    <a href="{% url 'lista_categorias' %}">Ir a la lista de categorías</a>
+{% endblock %}
