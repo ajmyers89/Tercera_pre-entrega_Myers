@@ -1,0 +1,30 @@
+<<<<<<< HEAD
+{% extends 'mi_aplicacion/base.html' %}
+{% extends 'base.html' %}
+
+{% block title %}Agregar Producto{% endblock %}
+
+{% block content %}
+    <h1>Agregar Producto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+    <a href="{% url 'lista_productos' %}">Ir a la lista de productos</a>
+{% endblock %}
+=======
+{% extends 'mi_aplicacion/base.html' %}
+
+{% block title %}Agregar Producto{% endblock %}
+
+{% block content %}
+    <h1>Agregar Producto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+    <a href="{% url 'lista_productos' %}">Ir a la lista de productos</a>
+{% endblock %}
+>>>>>>> e05f3afa8eee2925a874c67edb117784999d16ab

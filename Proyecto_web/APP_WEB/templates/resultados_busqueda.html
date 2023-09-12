@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+    <h1>Resultados de Búsqueda</h1>
+    <p>Estos son los resultados de tu búsqueda:</p>
+    <ul>
+        {% for resultado in resultados %}
+            <li>{{ resultado.nombre }}</li>
+        {% empty %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'buscar' %}">Realizar otra búsqueda</a>
+</body>
+</html>
